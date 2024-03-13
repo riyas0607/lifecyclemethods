@@ -29,14 +29,91 @@ Step 7: Save and run the application.
 ```
 /*
 Program to print the text “Hello World”.
-Developed by:
-Registeration Number :
+Developed by: Riyasudeen .R
+Registeration Number : 212221220044
 */
 ```
+## ACTIVITY_MAIN.XML:
+```
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EDE177"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textColor="#F40B0B"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+```
+## MAINACTIVITY.JAVA:
+```
+package com.example.helloworld;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.widget.Toast;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        Toast.makeText(getApplicationContext(), "OnCreate called", Toast.LENGTH_LONG).show();
+    }
+    protected void onStart(){
+        super.onStart();
+        Toast toast = Toast.makeText(getApplicationContext(), "OnStart called", Toast.LENGTH_LONG);
+        toast.show();
+    }
+    protected void onRestart(){
+        super.onRestart();
+        Toast toast = Toast.makeText(getApplicationContext(), "OnRestart called", Toast.LENGTH_LONG);
+        toast.show();
+    }
+    protected void onStop(){
+        super.onStop();
+        Toast toast = Toast.makeText(getApplicationContext(), "OnStop called", Toast.LENGTH_LONG);
+        toast.show();
+    }
+    protected void onPause(){
+        super.onPause();
+        Toast toast = Toast.makeText(getApplicationContext(), "OnPause called", Toast.LENGTH_LONG);
+        toast.show();
+    }
+    protected void onDestroy(){
+        super.onDestroy();
+        Toast toast = Toast.makeText(getApplicationContext(), "OnDestroy called", Toast.LENGTH_LONG);
+        toast.show();
+    }
+}
+```
+
 
 ## OUTPUT
-
-
+![Screenshot (215)](https://github.com/DonBoscoBlaiseA/lifecyclemethods/assets/140850829/49b41b3c-b967-4286-a745-f0954a9c83b7)
+![Screenshot (216)](https://github.com/DonBoscoBlaiseA/lifecyclemethods/assets/140850829/9b7adb9f-5d0a-42e0-adb6-8a5054532c39)
+![Op1](https://github.com/DonBoscoBlaiseA/Mobile-Application-Development/assets/140850829/7fb45310-b6f0-4762-aa06-2921a9217e72)
+![Op2](https://github.com/DonBoscoBlaiseA/Mobile-Application-Development/assets/140850829/d5e0f809-22e5-40c6-b446-18a24810d1f3)
+![Op3](https://github.com/DonBoscoBlaiseA/Mobile-Application-Development/assets/140850829/1b5eca00-017e-4d7a-b6ef-39c4a9bd6621)
+![Op4](https://github.com/DonBoscoBlaiseA/Mobile-Application-Development/assets/140850829/c0094a15-7aa1-4b4f-bda6-aa02d55e6823)
+![Op5](https://github.com/DonBoscoBlaiseA/Mobile-Application-Development/assets/140850829/85cb8a10-5fde-4b91-ab06-385ee004a987)
 
 
 ## RESULT
